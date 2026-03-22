@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "header.h"
+#include "parser.h"
 
 typedef struct commandType {
     char command[100];
@@ -8,8 +7,6 @@ typedef struct commandType {
 } command_t;
 
 command_t *parser(char * commandStr) {
-    command_t *cmd = (command_t *)malloc(sizeof(command_t));
- command_t *parser(char * commandStr) {
     command_t *cmd = (command_t *)malloc(sizeof(command_t));
     sscanf(commandStr, "%s", cmd->command);
     int x = strlen(cmd->command)+1;
@@ -28,5 +25,5 @@ int main() {
         printf("cmd->command = %s\n",cmd->command);
         printf("cmd->parameter = %s\n", cmd->paramater);
         free(cmd);
-    } while (strcmp(commandStr, "quit") != 0);
+    } while (strcmp(commandStr, "quit\n") != 0);
 }
