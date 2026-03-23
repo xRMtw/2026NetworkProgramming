@@ -1,11 +1,6 @@
 #include "header.h"
 #include "parser.h"
 
-typedef struct commandType {
-    char command[100];
-    char paramater[100];
-} command_t;
-
 command_t *parser(char * commandStr) {
     command_t *cmd = (command_t *)malloc(sizeof(command_t));
     sscanf(commandStr, "%s", cmd->command);
@@ -15,15 +10,15 @@ command_t *parser(char * commandStr) {
 }
    
 
-int main() {
-    char commandStr[256]={0};
-    command_t *cmd=NULL;
-    do {
-        printf("MyShell%% ");
-        fgets(commandStr, sizeof(commandStr), stdin);
-        cmd = parser(commandStr);
-        printf("cmd->command = %s\n",cmd->command);
-        printf("cmd->parameter = %s\n", cmd->paramater);
-        free(cmd);
-    } while (strcmp(commandStr, "quit\n") != 0);
-}
+// int main() {
+//     char commandStr[256]={0};
+//     command_t *cmd=NULL;
+//     do {
+//         printf("MyShell%% ");
+//         fgets(commandStr, sizeof(commandStr), stdin);
+//         cmd = parser(commandStr);
+//         printf("cmd->command = %s\n",cmd->command);
+//         printf("cmd->parameter = %s\n", cmd->paramater);
+//         free(cmd);
+//     } while (strcmp(commandStr, "quit\n") != 0);
+// }
