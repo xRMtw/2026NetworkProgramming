@@ -1,7 +1,7 @@
 #include "header.h"
 #include "parser.h"
 
-command_t *parser(char * commandStr) {
+command_t *parser( char * commandStr ) {
     command_t *cmd = (command_t *)malloc(sizeof(command_t));
     sscanf(commandStr, "%s", cmd->command);
     int x = strlen(cmd->command)+1;
@@ -9,7 +9,6 @@ command_t *parser(char * commandStr) {
     return cmd;
 }
    
-
 // int main() {
 //     char commandStr[256]={0};
 //     command_t *cmd=NULL;

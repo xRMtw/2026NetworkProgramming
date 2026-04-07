@@ -1,10 +1,18 @@
-#include "header.h"
-#include "buildin.h"
+// #include "header.h"
+// #include "buildin.h"
 
-void settenv ( char* var, char* val ) {
-    printf("This is settenv\n");
-}
+// char PATH[] = "bin:.";
 
-void printenv ( char* var ) {
-    printf("This is printenv\n");
-}
+// void settenv ( char* var, char* val ) {
+//     if( strcmp( var, "PATH" ) == 0 ) {
+//         strcpy( PATH, val );
+//     }
+//     else {}
+// }
+
+// void printenv ( char* var ) {
+//     if( strcmp( var, "PATH" ) == 0 ) {
+//         printf( "%s\n", PATH );
+//     }
+//     else {}
+// }
